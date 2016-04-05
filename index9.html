@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>UnderScoreStudy</title>
+</head>
+<body>
+    <script src="underscore.js"></script>
+    <script>
+        (function() {
+
+            var x;
+            var user = {
+                name: 'saito',
+                score: 50,
+                web: 'http://localhost'
+            };
+
+            // <% %>
+            // <%= %>
+            // <%- %>
+            var tpl = '<li><%- name %> (<%- score %>)</li>';
+            x = _.template(tpl, user);
+
+            console.log(x);
+        })();
+    </script>
+</body>
+</html>
