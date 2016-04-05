@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>UnderScoreStudy</title>
+</head>
+<body>
+    <script src="underscore.js"></script>
+    <script>
+        (function() {
+
+            var x;
+            var user = {
+                name: 'saito',
+                score: 80,
+                web: 'http://localhost'
+            };
+
+            // keys
+            x = _.keys(user);
+            console.log(x); // ["name", "score", "web"]
+
+            // values
+            x = _.values(user);
+            console.log(x); // ["saito", 80, "http://localhost"]
+
+            // invert(key, valueを反転)
+            x = _.invert(user);
+            console.log(x); // Object {80: "score", saito: "name", http://localhost: "web"}
+
+            // has(指定したキーがあるかboolenで返す)
+            x = _.has(user, "name");
+            console.log(x); // true
+
+            // isEmpty, isString, isNull, isNumber
+
+        })();
+    </script>
+</body>
+</html>
