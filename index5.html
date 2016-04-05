@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>UnderScoreStudy</title>
+</head>
+<body>
+    <script src="underscore.js"></script>
+    <script>
+        (function() {
+
+            var a = [1, 2, 5];
+            var b = [5, 2, 8];
+            var x;
+
+            // union(和集合)
+            x = _.union(a, b);
+            console.log(x); // [1, 2, 5, 8] 重複を排除してマージ
+
+            // intersection(共通を探す)
+            x = _.intersection(a, b)
+            console.log(x); // [2, 5]
+
+            // difference(bにはないaの要素を探す)
+            x = _.difference(a, b);
+            console.log(x); // [1]
+
+            // uniq(重複排除)
+            x = _.uniq([2, 5, 2, 10, 9]);
+            console.log(x); // [2, 5, 10, 9]
+
+        })();
+    </script>
+</body>
+</html>
