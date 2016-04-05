@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>UnderScoreStudy</title>
+</head>
+<body>
+    <script src="underscore.js"></script>
+    <script>
+        (function() {
+
+            var x;
+            var a = [2, 5, 10, 8];
+
+            // shuffleのあとにmap
+            x = _.chain(a)
+                    .shuffle()
+                    .map(function (num) {
+                        return num * 2;
+                    })
+                    .value();
+
+            console.log(x);
+
+        })();
+    </script>
+</body>
+</html>
