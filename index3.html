@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>UnderScoreStudy</title>
+</head>
+<body>
+    <script src="underscore.js"></script>
+    <script>
+        (function() {
+
+            // find(見つかった最初を返す)
+            var a = [2, 5, 8, 42, 12];
+            var x;
+
+            x = _.find(a, function(num) {
+                return num > 5;
+            });
+
+            console.log(x); // 8
+
+            // filter(見つかった全てを返す)
+            x = _.filter(a, function(num) {
+                return num > 5;
+            })
+
+            console.log(x); // [8, 42, 12]
+
+            // contains(存在するかどうかをbooleanで返す)
+            x = _.contains(a, 5);
+
+            console.log(x); // true
+            
+        })();
+    </script>
+</body>
+</html>
