@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>UnderScoreStudy</title>
+</head>
+<body>
+    <script src="underscore.js"></script>
+    <script>
+        (function() {
+
+            var a = [1, 2, 5, 8, 42, 12];
+            var x;
+
+            // groupBy(グルーピング)
+            x = _.groupBy(a, function(num) {
+               return num % 3; // Object {0: Array[2], 1: Array[1], 2: Array[3]}
+
+            });
+            console.log(x);
+
+            // countBy(数を数える)
+            x = _.countBy(a, function(num) {
+                return num % 2 == 0 ? 'even' : 'odd';
+            });
+            console.log(x); // Object {odd: 2, even: 4}
+
+            // sortBy
+            x = _.sortBy(a, function(num) {
+                return Math.sin(num); // [5, 42, 12, 1, 2, 8]
+            });
+            console.log(x);
+
+            // プロパティの長さでソート
+            x = _.sortBy(["me", "i", "and"], "length");
+            console.log(x); // ["i", "me", "and"]
+        })();
+    </script>
+</body>
+</html>
