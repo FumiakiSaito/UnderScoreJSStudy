@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>UnderScoreStudy</title>
+</head>
+<body>
+    <script src="underscore.js"></script>
+    <script>
+        (function() {
+            var x;
+
+            // 関数的記述方法
+            // x = _.shuffle([2, 8, 10, 3])
+
+            // オブジェクト志向的記述方法
+            x = _([2, 8, 10, 3]).shuffle();
+            console.log(x);
+        })();
+    </script>
+</body>
+</html>
