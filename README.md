@@ -1,2 +1,2 @@
-# UnderScoreJSStudy
+# UnderScoreJS
 
